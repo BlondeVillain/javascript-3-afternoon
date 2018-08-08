@@ -1,5 +1,6 @@
 /*
-  Once you complete a problem, refresh ./destructuring.html in your browser and check to see if the problem's test(s) are passing.
+  Once you complete a problem, refresh ./destructuring.html in your browser 
+  and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
 
@@ -18,7 +19,8 @@ var carDetails = {
 // Do not edit the code above.
 
 /*
-  Use object destructuring to save the property values from the object carDetails into new variables. 
+  Use object destructuring to save the property values from
+   the object carDetails into new variables. 
 */
 
 //Code Here
@@ -74,7 +76,8 @@ function greeting( obj ) {
 ////////// PROBLEM 5 //////////
 
 /*
-  Now we will use object destructuring as the function's parameter instead of destructuring the object inside of the function declaration.
+  Now we will use object destructuring as the function's parameter 
+  instead of destructuring the object inside of the function declaration.
   Example:
     function example( {one, two, three} ) {
       return one + two + three

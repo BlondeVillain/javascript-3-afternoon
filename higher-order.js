@@ -1,5 +1,6 @@
 /*
-  Once you complete a problem, refresh ./higher-order.html in your browser and check to see if the problem's test(s) are passing.
+  Once you complete a problem, refresh ./higher-order.html in your browser 
+  and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
 
@@ -35,8 +36,10 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
   Use the map method on the prices array to calculate a new array of post-tax prices.
   Use a 7% tax rate.
 
-  Math reminder! To calculate the price after tax, multiply the price by 1 plus the taxRate as a decimal.
-  Example: if tax is 7%, the price afterTax could be calculated like this: afterTax = price * 1.07) 
+  Math reminder! To calculate the price after tax, multiply the price by 1
+   plus the taxRate as a decimal.
+  Example: if tax is 7%, the price afterTax could be calculated
+   like this: afterTax = price * 1.07) 
 
   The map function also takes a callback with the parameters
   function(element, index, wholeArray){}  Function Form
@@ -83,7 +86,8 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 
 /*
   Now we're going to ramp these up a little bit.
-  Instead of just arrays of numbers, we are going to have array of objects that we want to use map, filter, and reduce with.
+  Instead of just arrays of numbers, we are going to have array of objects that
+   we want to use map, filter, and reduce with.
 
   Use the filter method to return only the monsters that have a CP of over 200.
 */
@@ -103,7 +107,8 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 // Do not edit code above.
 
 /*
-  Use a higher order method to get the sum of all the order totals after adding in the sales tax
+  Use a higher order method to get the sum of all the order totals after adding 
+  in the sales tax
 */
 
 let ordersTotal //Code Here
