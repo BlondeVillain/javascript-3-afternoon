@@ -22,7 +22,10 @@ var carDetails = {
   Use object destructuring to save the property values from
    the object carDetails into new variables. 
 */
-
+var color = "red";
+var make = "toyota";
+var model = "tacoma";
+var year = 1994;
 //Code Here
 
 
@@ -42,7 +45,9 @@ function greeting( obj ) {
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
-
+var firstName = "";
+var lastName = "";
+var title = "";
 
 
 ////////// PROBLEM 3 //////////
@@ -55,9 +60,21 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+var populationObj = 
+{
+utah: 0,
+california: 0,
+texas: 0,
+arizona: 0,
+};
 
-
+function totalPopulation(populationObj)
+{
+var utah = populationObj.utah;
+var california = populationObj.california;
+var arizona = populationObj.arizona;
+var texas = populationObj.texas;
+};
 
 ////////// PROBLEM 4 //////////
 
@@ -68,6 +85,21 @@ function greeting( obj ) {
   Use object destructuring to save the property values to new variables. 
   Push these new variables to an array and return the array. 
 */
+var obj = 
+{
+carb: "",
+fat: "",
+protein: ""
+}
+
+function ingredients(obj)
+{
+  var carb = obj.carb();
+  var fat = obj.fat();
+  var protein = obj.protein();
+  var ingredientsArray = [];
+  ingredientsArray.push(carb, fat, protein);
+}
 
 //Code Here
 
@@ -87,7 +119,20 @@ function greeting( obj ) {
   The object properties will be named first, second, and third and their values will be numbers.
   Find the smallest number of the three and return that number.
 */
+/*<<<<<FINISH ME!
+var object = {
+first: 0,
+second: 0,
+thrid: 0
+};
+var first;
+var second;
+var third;
+function largeNumbers(first, second, third)
+{
 
+  return //smallest number
+}
 //Code Here
 
 
@@ -99,6 +144,26 @@ function greeting( obj ) {
   The object properties will be named a, b, and c and their values will be arrays of numbers.
   Find the longest array and return that array.
 */
+/*<<<<<FINISH ME!
+var object = {
+  a: [1],
+  b: [1,2,3],
+  c: [1,2]
+  };
+  var a;
+  var b;
+  var c;
+function numberGroups(a,b,c)
+{
+if (arr[a] > arr[b] && arr[a] > arr[c])
+{return arr[a]}
+
+else if (arr[b] > arr[a] && arr[b] > arr[c])
+{return arr[b]}
+
+else if (arr[c] > arr[a] && arr[c] > arr[b])
+{return arr[c]}
+}
 
 //Code Here
 
