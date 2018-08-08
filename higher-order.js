@@ -25,6 +25,8 @@ function isEven(num)
 {return (num % 2 == 0)}
 mixedNumbers.filter(isEven);
 console.log(mixedNumbers.filter(isEven));
+// <<< IMPLIMENT ME!
+//(element, index, wholeArray)=>{} 
 //let evenNumbers  = mixedNumbers.filter(cb)
 
 
@@ -50,7 +52,7 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 
 //Code Here
 let postTaxPrices // = prices.map(/* Provide Your Callback Here );
-
+//>>>>>>>>WATCH ME ! https://www.youtube.com/watch?v=nicMAoW6u1g
 
 
 ////////// PROBLEM 3 //////////
