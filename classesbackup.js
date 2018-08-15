@@ -26,17 +26,21 @@
   Call your class Employee and receive all the data in the constructor in the order listed above.
 */
 class Employee{
-  constructor(first_name, last_name, email, age){
-    this.first_name = first_name, 
-    this.last_name = last_name,
-    this.email = email,
+  constructor(first_name, last_name, email, age)
+  {
+    this.first_name = first_name 
+    this.last_name = last_name
+    this.email = email
     this.age = age
   }
   makeWidget(){
-    return this.first_name + " " + this.last_name + " " + "Widget"
+    return this.first_name + this.last_name + "Widget"
   }
 }
-var employee = new Employee("Boss", "Man", "bossman@gmail.com");
+var guy = new Employee("Boss", "Man", "bossman@fuckidk.com", 99);
+console.log(guy);
+guy.makeWidget();
+//Code Here
 
 
 
@@ -54,26 +58,24 @@ var employee = new Employee("Boss", "Man", "bossman@gmail.com");
       - Fire removes employees from their list of reports at the given index
   Call your new class Manager
 */
-class Manager extends Employee{
-  constructor(first_name, last_name, email, age)
+class Manager{
+  constructor(first_name, last_name, email, age, reports)
   {
-    super()
-    this.first_name = first_name, 
-    this.last_name = last_name,
-    this.email = email,
-    this.age = age,
-    this.reports = []
+    this.first_name = first_name
+    this.last_name = last_name
+    this.email = email
+    this.age = age
+    this.reports(employee = []) = reports
   }
-  hire(employee)
-  {
-    this.reports.push(employee);
-  }
-
-  fire(index)
-  {
-    this.reports.splice(index, 1);
-  }
+  makeWidget(){
+    return this.first_name + this.last_name + "Widget"}
+  hire(employee){employee.push[employee]}
+  fire(index){employee.splice(index, 1)}
 }
+Bill = new Manager("", "", "", "", reports(""))
+Bill.hire("Billy")
+Bill.fire(0)
+
 ////////// PROBLEM 3 //////////
 
 /*
@@ -94,25 +96,20 @@ class Manager extends Employee{
   Everytime they fire an employee they get $100 added to their bonus.
   Call your new class ProgressiveManager
 */
-class ProgressiveManager extends Employee{
+class ProgressiveManager{
   constructor(first_name, last_name, email, age, reports, title, bonus)
   {
-    super()
-    this.first_name = first_name 
+    this.first_name = first_name
     this.last_name = last_name
     this.email = email
     this.age = age
-    this.reports = []
-    this.title = 'Not a manager'
-    this.bonus = 0
+    this.reports(employee = []) = reports
+    this.title = title
+    this.bonus = bonus
   }
- 
-
   makeWidget(){
     return this.first_name + this.last_name + "Widget"}
-  hire(employee)
-  {
-    employee.push[employee]}
+  hire(employee){employee.push[employee]}
   fire(index){employee.splice(index, 1)}
   title(result)
   {
@@ -144,13 +141,11 @@ class ProgressiveManager extends Employee{
 */
 class Machine{
     constructor()
-{   this.widgets_made_count = 0,
-    this.wear_and_tear_count = 0,
-    this.needs_reboot = false
+{   this.widgets_made_count = widgets_made_count,
+    this.wear_and_tear_count = wear_and_tear_count,
+    this.needs_reboot = needs_reboot
 }
-makeWidgets(number){
-  widgets_made_count += number;
-}
+makeWidgets(number){widgets_made_count + number}
 fixMachine(){needs_reboot = true}
 reboot()
 {

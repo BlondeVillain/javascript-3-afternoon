@@ -22,10 +22,8 @@ var carDetails = {
   Use object destructuring to save the property values from
    the object carDetails into new variables. 
 */
-var color = "red";
-var make = "toyota";
-var model = "tacoma";
-var year = 1994;
+let {color, make, model, year}  = carDetails;
+console.log(carDetails)
 //Code Here
 
 
@@ -37,17 +35,23 @@ var year = 1994;
   Use object destructuring to save the object properties to new variables. 
   The property names are firstName, lastName, and title.
 */
+var problemTwoObj={
+  firstName: "Betty",
+  lastName: "JavaScript",
+  title: "Queen"
+}
 
-function greeting( obj ) {
-  //Code Here
-  
-  // Do not edit the code below.
-  return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
+
+function greeting(problemTwoObj) {
+var {firstName, lastName, title} = problemTwoObj;
+// Do not edit the code below.
+return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
-var firstName = "";
-var lastName = "";
-var title = "";
+
+
+console.log(greeting(problemTwoObj));
+
 
 
 ////////// PROBLEM 3 //////////
@@ -62,19 +66,18 @@ var title = "";
 
 var populationObj = 
 {
-utah: 0,
-california: 0,
-texas: 0,
-arizona: 0,
+utah: 1,
+california: 2,
+texas: 3,
+arizona: 5,
 };
 
-function totalPopulation(populationObj)
-{
-var utah = populationObj.utah;
-var california = populationObj.california;
-var arizona = populationObj.arizona;
-var texas = populationObj.texas;
-};
+function totalPopulation(populationObj){
+let {utah,california,arizona,texas} = populationObj
+sum = utah + california + texas + arizona;
+return sum;
+}
+console.log(totalPopulation(populationObj))
 
 ////////// PROBLEM 4 //////////
 
@@ -85,22 +88,21 @@ var texas = populationObj.texas;
   Use object destructuring to save the property values to new variables. 
   Push these new variables to an array and return the array. 
 */
-var obj = 
+var problemFourObj = 
 {
-carb: "",
-fat: "",
-protein: ""
+carb: "death",
+fat: "testoerone",
+protein: "muscle"
+}
+function ingredients(problemFourObj)
+{
+let {carb,fat,protein} = problemFourObj
+newarr = [];
+newarr.push(problemFourObj.carb,problemFourObj.fat,problemFourObj.protein);
+return newarr;
 }
 
-function ingredients(obj)
-{
-  var carb = obj.carb();
-  var fat = obj.fat();
-  var protein = obj.protein();
-  var ingredientsArray = [];
-  ingredientsArray.push(carb, fat, protein);
-}
-
+console.log(ingredients(problemFourObj));
 //Code Here
 
 
@@ -119,20 +121,19 @@ function ingredients(obj)
   The object properties will be named first, second, and third and their values will be numbers.
   Find the smallest number of the three and return that number.
 */
-/*<<<<<FINISH ME!
-var object = {
-first: 0,
-second: 0,
-thrid: 0
-};
-var first;
-var second;
-var third;
-function largeNumbers(first, second, third)
-{
 
-  return //smallest number
+var object = {
+first: 1,
+second: 2,
+third: 3
+};
+var {first, second, third}  = object;
+
+function largeNumbers(object)
+{ smallest = Math.min(first, second, third);
+  return smallest;
 }
+console.log(largeNumbers(object));
 //Code Here
 
 
@@ -144,27 +145,40 @@ function largeNumbers(first, second, third)
   The object properties will be named a, b, and c and their values will be arrays of numbers.
   Find the longest array and return that array.
 */
-/*<<<<<FINISH ME!
-var object = {
-  a: [1],
-  b: [1,2,3],
-  c: [1,2]
-  };
-  var a;
-  var b;
-  var c;
-function numberGroups(a,b,c)
+
+// Jasmine test failing depite proper output:
+
+  // it('should return the correct value', function () {
+  //   expect(numberGroups({a:[1, 2, 3], b:[1], c:[1, 2, 3, 4, 5]})).toEqual([ 1, 2, 3, 4, 5 ]);
+  //   expect(numberGroups({a:[1, 2, 3], b:[1, 2, 3, 4], c:[1, 2, 3]})).toEqual([ 1, 2, 3, 4 ]); var {a, b, c}  = object;
+
+  // TEST 1
+
+ var object = {
+  a:[1, 2, 3],
+   b:[1],
+   c:[1, 2, 3, 4, 5]
+   };
+
+  // TEST 2:
+
+  // var object = {
+//     a:[1, 2, 3],
+//     b:[1, 2, 3, 4],
+//     c:[1, 2, 3]
+//     };
+  
+ function numberGroups(object)
 {
-if (arr[a] > arr[b] && arr[a] > arr[c])
-{return arr[a]}
-
-else if (arr[b] > arr[a] && arr[b] > arr[c])
-{return arr[b]}
-
-else if (arr[c] > arr[a] && arr[c] > arr[b])
-{return arr[c]}
+  let longest = Math.max(a.length, b.length, c.length);
+if (a.length == longest){
+  return a;
+  }
+else if (b.length == longest){
+  return b;
+  }
+else if (c.length == longest){
+  return c;
+  }
 }
-
-//Code Here
-
-
+console.log(numberGroups(object))
