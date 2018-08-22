@@ -1,14 +1,4 @@
-/*
-  Once you complete a problem, refresh ./nesting.html in your browser and check to see if the problem's test(s) are passing.
-  Passed tests will be indicated by a green circle.
-  Failed tests will be indicated by a red X.
-
-  You can refresh the page at any time to re-run all the tests.
-*/
-
 ////////// PROBLEM 1 //////////
-
-// Do not edit the code below.
 var employees = [
   {
     "firstName": "Von",
@@ -41,14 +31,6 @@ var employees = [
     "department": "Research and Development"
   }
 ];
-// Do not edit the code above.
-
-/*
-  Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater will loop over the array above and perform the following:
-    1. If employee's first name is Theo, remove that employee because he just got fired.
-    2. If the employee's first name is Lorie, change her department to 'HR'.
-    3. Return the updated employee array.
-*/
 function employeeUpdater()
 {
   for(n=0; employees.length<n; n++)
@@ -56,22 +38,8 @@ function employeeUpdater()
   else if(employees[n].firstName == "Lorie"){employees[n].department == "HR"}
   return employees;
 }
-
 ////////// PROBLEM 2 //////////
-
-// Do not edit the code below.
 var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
-// Do not edit the code above.
-
-/*
-  The array above represents IDs tied to reported workplace accidents. 
-  An employee accidentally entered in duplicates to array, making it look as though there are more accidents this year than there actually are.
-    1. Write a function called 'removeDuplicates' that will remove all duplicate entries in the workplaceAccidents array.
-    2. Use nested for loops to check for duplicate numbers, and then remove the duplicates from the array.
-    3. Return the updated array.
-*/
-
-
 function removeDuplicates()
 {
   let newArr = [];
@@ -83,12 +51,7 @@ function removeDuplicates()
   }
   return newArr;
 }
-
-
-
 ////////// PROBLEM 3 //////////
-
-// Do not edit the code below.
 var cat = {
   name: 'Fluffy',
   catFriends: [
@@ -102,24 +65,9 @@ var cat = {
     }
   ]
 }
-// Do not edit the code above.
-
-/*
-  Fluffy has two friends, Grumpy and Lazy Bones. 
-    1. Assign the value of Grumpy's 2nd activity to the grumpyActivity variable below.
-    2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
-*/
-
-//Code Here
 var grumpyActivity = cat.catFriends[0].activities[1]
-
 var fluffy2ndFriend  = cat.catFriends[1].name
-
-
-
 ////////// PROBLEM 4 //////////
-
-// Do not edit the code below.
 var myCar = {
   make: 'Toyota',
   model: 'Corolla',
@@ -142,25 +90,8 @@ var myCar = {
     }
   ]
 }
-// Do not edit the code above.
-
-/*
-  Above is some information about my car. As you can see, I am not the best driver.
-  I have caused a few accidents.
-  Please update this driving record so that I can feel better about my driving skills.
-    1. Write a function called recordCleaner.
-    2. Loop over the accidents array.
-    3. Change atFaultForAccident from true to false.
-*/
-
-
-
 ////////// PROBLEM 5 //////////
-
-// Do not edit the code below.
 var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
-// Do not edit the code above.
-
 /*
   Above is an array of arrays. Use two for loops.
     1. Write a function called 'looper'. 
