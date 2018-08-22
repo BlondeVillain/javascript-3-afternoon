@@ -78,7 +78,7 @@ function removeDuplicates()
   for(var i=0; i<workplaceAccidents.length; i++)
   {
     if(!newArr.includes(workplaceAccidents[i]))
-    
+
       newArr.push(workplaceAccidents[i]);
   }
   return newArr;
@@ -153,12 +153,6 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-// function recordCleaner()
-// {
-//   let loop = myCar.accidents.length;
-//   for(let i=0; i<loop; i++)
-//     myCar.accidents[i].atFaultForAccident = false;
-// }
 
 
 ////////// PROBLEM 5 //////////
@@ -176,4 +170,3 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
