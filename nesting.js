@@ -33,10 +33,13 @@ var employees = [
 ];
 function employeeUpdater()
 {
-  for(n=0; employees.length<n; n++)
-  {if(employees[n].firstName == "Theo"){employees.splice(n,1)}
-  else if(employees[n].firstName == "Lorie"){employees[n].department == "HR"}
-  return employees;
+  for(var n=0; employees.length>n; n++){
+    if(employees[n].firstName == "Theo"){employees.splice(n,1)}
+
+  else if(employees[n].firstName == "Lorie")
+  {employees[n].department = "HR"}
+}
+return employees;
 }
 ////////// PROBLEM 2 //////////
 var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
@@ -51,6 +54,8 @@ function removeDuplicates()
   }
   return newArr;
 }
+removeDuplicates();
+
 ////////// PROBLEM 3 //////////
 var cat = {
   name: 'Fluffy',
@@ -90,6 +95,12 @@ var myCar = {
     }
   ]
 }
+function recordCleaner()
+{
+  var loop = myCar.accidents.length;
+  for(i=0; i<loop; i++){
+    myCar.accidents[i].atFaultForAccident = false;
+}
 ////////// PROBLEM 5 //////////
 var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 /*
@@ -99,5 +110,17 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     3.  If the number is odd, replace it with 'odd'.
         If the number is even, replace it with 'even'.
     4. Return the modified numsArr.
-*/
+*/function looper(){
 
+for(i=0; i<numsArr.length; i++){
+  for (n=0; n>numsArr[i].length; j++){
+    if(numsArr[i][n]%2 === 0){
+      numsArr[i][n] ==  "even";
+          }
+    else {
+        numsArr[i][n] == "odd";
+          }
+    }return numsArr;
+  }
+}
+}
