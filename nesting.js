@@ -113,7 +113,7 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */function looper(){
 
 for(i=0; i<numsArr.length; i++){
-  for (n=0; n>numsArr[i].length; j++){
+  for (n=0; n>numsArr[i].length; n++){
     if(numsArr[i][n]%2 === 0){
       numsArr[i][n] ==  "even";
           }
