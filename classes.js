@@ -1,30 +1,4 @@
-
-/* 
-  Once you complete a problem, refresh ./classes.html in your browser and check to see if the problem's test(s) are passing.
-  Passed tests will be indicated by a green circle.
-  Failed tests will be indicated by a red X.
-  You can refresh the page at any time to re-run all the tests.
-  Classes are a tool for building similar objects over and over again.
-  They are a construct that helps your organize your code.
-  Let's work with some employees at a company.
-  You work for Widget Co. They have hundreds of employees.
-*/
-
 ////////// PROBLEM 1 //////////
-
-/*
-  Make a class to help us build all of the employees.
-  Each employee has the following properties:
-    - first_name
-    - last_name
-    - email
-    - age
-  Each employee has the following methods:
-    - makeWidget
-      - This returns a string equal to the employees first name + last name + the word widget
-      - Example: "Dave Smith Widget"
-  Call your class Employee and receive all the data in the constructor in the order listed above.
-*/
 class Employee{
   constructor(first_name, last_name, email, age){
     this.first_name = first_name, 
@@ -32,28 +6,10 @@ class Employee{
     this.email = email,
     this.age = age
   }
-  makeWidget(){
-    return this.first_name + " " + this.last_name + " " + "Widget"
-  }
+  makeWidget(){return this.first_name + " " + this.last_name + " " + "Widget"}
 }
 var employee = new Employee("Boss", "Man", "bossman@gmail.com");
-
-
-
 ////////// PROBLEM 2 //////////
-
-/*
-  Next, make a manager for Widget Co.
-  The manager has all the same properties as an Employee.
-  Each manager has the following additional properties:
-    - reports (other employees) that defaults to an empty array
-  Each manager has the following additional methods:
-    - hire (employee)
-      - Accepts a new employee as a parameter and pushes it to their list of reports.
-    - fire (index)
-      - Fire removes employees from their list of reports at the given index
-  Call your new class Manager
-*/
 class Manager extends Employee{
   constructor(first_name, last_name, email, age)
   {
@@ -64,36 +20,10 @@ class Manager extends Employee{
     this.age = age,
     this.reports = []
   }
-  hire(employee)
-  {
-    this.reports.push(employee);
-  }
-
-  fire(index)
-  {
-    this.reports.splice(index, 1);
-  }
+  hire(employee){this.reports.push(employee);}
+  fire(index){this.reports.splice(index, 1);}
 }
 ////////// PROBLEM 3 //////////
-
-/*
-  Managers for Widget Co. get promoted when they get more employees,
-  and get a bonus when they fire employees.
-  Progressive Managers have all the same properties as the manager,
-  but they also have the following additional properties:
-    - title - default 'Not a manager'
-    - bonus - default 0
-  When employees are added or removed we need to check and update their title.
-  Their titles are as follows:
-    0 : Not a manager
-    1-3 : Barely Manager
-    4-10 : Mostly Manager
-    11-50 : Manager
-    51-100 : Manager Plus
-    101+ : Bestest Manager
-  Everytime they fire an employee they get $100 added to their bonus.
-  Call your new class ProgressiveManager
-*/
 class ProgressiveManager extends Employee{
   constructor(first_name, last_name, email, age, reports, title, bonus)
   {
@@ -105,30 +35,66 @@ class ProgressiveManager extends Employee{
     this.reports = []
     this.title = 'Not a manager'
     this.bonus = 0
+    this.employeeChanges = 0;
   }
  
+  makeWidget(){return this.first_name + this.last_name + "Widget"}
 
-  makeWidget(){
-    return this.first_name + this.last_name + "Widget"}
-  hire(employee)
-  {
-    employee.push[employee]}
-  fire(index){employee.splice(index, 1)}
-  title(result)
-  {
-    if (result = null)
-    {return 'Not a manager'}
-  //Program the title update for the prescribed scores above.
-  }
+  fire(employee){
+  
+  this.reports.splice(this.reports.indexOf(employee), 1);
+  this.employeeChanges++;
+  this.bonus += 100;
+  this.checkTitle()
+  console.log("Your fired.")}
+  
+  hire(employee){
+  
+  this.reports.push(employee)
+  this.employeeChanges++;
+  this.checkTitle()
+  console.log("You are a great guy, a really great guy. Lets get this guy a job.")}
+  
+  bonus(employeeFiring){
+  
+  if (employeeFiring == null)
+  {return 0}
+  console.log("I'm going to get a bonus and its going to be YUGE!")}
+  
+  title(result){
+  
+    if (result == null)
+  {return 'Not a manager'}
+  console.log("I would be the best manager. No manager would be better than me.")}
+  
+  checkTitle(){
+  switch (true){
+    case (this.employeeChanges == 0):
+    this.title = "Not a manager";
+    break;
 
-  bonus(employeeFiring)
-  {
-    if (employeeFiring = null)
-    {return 0}
-    //Program $100 bonus for each emplyee fired.
+      case (this.employeeChanges >= 1 && this.employeeChanges <= 3):
+      this.title = "Barely Manager";
+      break;
+
+        case (this.employeeChanges >= 4 && this.employeeChanges <= 10):
+        this.title = "Mostly Manager";
+        break;
+
+         case (this.employeeChanges >= 11 && this.employeeChanges <= 50):
+         this.title = "Manager";
+         break;
+
+        case (this.employeeChanges >= 51 && this.employeeChanges <= 100):
+        this.title = "Manager Plus";
+        break;
+
+      case (this.employeeChanges > 101):
+      this.title = "Bestest Manager";
+      break;
+    }
   }
 }
-
 
 ////////// PROBLEM 4 - Black Diamond //////////
 
